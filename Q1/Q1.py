@@ -17,3 +17,5 @@ def main():
     encryption(shift1, shift2)
     decryption(shift1, shift2)
     verification()
+
+main()
