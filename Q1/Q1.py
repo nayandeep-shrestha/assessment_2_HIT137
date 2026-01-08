@@ -1,6 +1,7 @@
 import os
 
 def encryption(shift1, shift2):
+    # opens raw file in read mode and creates (or opens) encrypted file in write mode
     with open("raw_text.txt", "r", encoding="utf-8") as raw_file, \
         open("encrypted_text.txt", "w", encoding="utf-8") as encrypted_file:
 
@@ -8,11 +9,21 @@ def encryption(shift1, shift2):
             if char.islower():
                 if 'a' <= char <= 'm':
                     shift = shift1 * shift2
+                    # Applying forward shift with wrap around
                     new_char = chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
                 else:
                     shift = shift1 + shift2
+                    # Applying backward shift with wrap around
                     new_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))
 
+            elif char.isupper():
+                if 'A' <= char <= 'M':
+                    new_char = chr((ord(char) - ord('A') - shift1) % 26 + ord('A'))
+                else:
+                    shift = shift2 ** 2
+                    new_char = chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
+
+            # If character is not a letter, no change
             else:
                 new_char = char
 
