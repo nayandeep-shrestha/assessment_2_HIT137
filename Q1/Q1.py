@@ -10,6 +10,7 @@ def encryption(shift1, shift2):
             # Encryption logic for lowercase letters
             if char.islower():
                 if 'a' <= char <= 'm':
+                    # %13 for wrapping around first half of alphabet
                     shift = (shift1 * shift2) % 13
                     # Applying forward shift with wrap around
                     new_char = chr((ord(char) - ord('a') + shift) % 13 + ord('a'))
@@ -69,7 +70,13 @@ def decryption(shift1, shift2):
 
 # ///////////  VERIFICATION FUNCTION ///////////
 def verification():
-    print(f"Verification successfull")
+    with open("raw_text.txt", "r", encoding="utf-8") as raw_file, \
+        open("decrypted_text.txt", "r", encoding="utf-8") as decrypted_file:
+
+        if raw_file.read() == decrypted_file.read():
+            print(f"Verification successfull")
+        else:
+            print(f"Verification failed")
 
 # ///////////  MAIN FUNCTION ///////////
 def main():
