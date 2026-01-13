@@ -1,0 +1,4 @@
+Autumn:27.3C
+Spring:27.4C
+Summer:32.1C
+Winter:21.1C
