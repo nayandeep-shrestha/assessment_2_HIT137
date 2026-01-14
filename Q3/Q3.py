@@ -32,8 +32,14 @@ def main():
 
     #----- Setting Turtle ----------
     ninja.speed(0)
+    ninja.shape("turtle")
     turtle.bgcolor("black")
     ninja.color("green")
+
+    #-------- Center the shape -----------
+    ninja.penup()
+    ninja.goto(-length/2, -length/2)
+    ninja.pendown()
 
     drawPolygon(sides, length, depth)
 
