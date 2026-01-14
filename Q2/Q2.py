@@ -5,7 +5,7 @@ import numpy as np
 
 Folder="temperatures"
 
-#adds in dictionary
+#adds in list
 months=["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"]
 
