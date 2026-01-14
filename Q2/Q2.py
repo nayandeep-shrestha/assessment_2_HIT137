@@ -73,8 +73,8 @@ max_sd=sd.max()
 with open("temperature_stability_stations.txt","w")as f: # writing in a file
     f.write("Most Stable:\n")
     for station in sd[sd==min_sd].index:
-        f.write(f"{station}:sd {min_sd:.1f}C\n")
+        f.write(f"{station}:standard deviation {min_sd:.1f}C\n")
 
     f.write("Most Variable:\n")
     for station in sd[sd==max_sd].index:
-        f.write(f"{station}:sd {max_sd:.1f}C\n")
+        f.write(f"{station}:standard deviation {max_sd:.1f}C\n")
