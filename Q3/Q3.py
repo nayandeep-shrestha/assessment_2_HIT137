@@ -14,4 +14,12 @@ def drawEdges (length, depth ):
         ninja.left(60)
         drawEdges(length, depth -1)
 
-turtle.done ()
+def main():
+    
+    sides=int(input("enter the number of sides:"))
+    length= int(input("enter the side length"))
+    depth= int(input("enter the recursion depth:"))
+
+    turtle.done ()
+
+main()
