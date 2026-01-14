@@ -15,6 +15,7 @@ def drawEdges (length, depth ):
         ninja.left(60)
         drawEdges(length, depth -1)
 
+# ------------ Function to draw a polygon ---------
 def drawPolygon(sides, length, depth):
     angle = 360 / sides
     for _ in range(sides):
@@ -28,6 +29,11 @@ def main():
     sides=int(input("enter the number of sides:"))
     length= int(input("enter the side length"))
     depth= int(input("enter the recursion depth:"))
+
+    #----- Setting Turtle ----------
+    ninja.speed(0)
+    turtle.bgcolor("black")
+    ninja.color("green")
 
     drawPolygon(sides, length, depth)
 
