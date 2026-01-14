@@ -1,4 +1,4 @@
 Most Stable:
-DARWIN-AIRPORT:sd 1.2C
+DARWIN-AIRPORT:standard deviation 1.2C
 Most Variable:
-WAGGA-WAGGA-AMO:sd 6.9C
+WAGGA-WAGGA-AMO:standard deviation 6.9C
